@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="Vid2Real effectively transfers insights from video-based study into the real-world.">
+  <meta name="keywords" content="Vid2Real, HRI, HRE, Robotics, Autonomy">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vid2Real: A framework for aligning video-based HRI studies with real-world settings</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HDNBEV2PRY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-HDNBEV2PRY');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.pdf">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="#">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://sites.utexas.edu/nsf-gcr/">
+              NSF-GCR
+            </a>
+            <a class="navbar-item" href="https://amrl.cs.utexas.edu/">
+              AMRL
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Vid2Real: A framework for aligning video-based HRI studies with
+              real-world settings</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://elliotthauser.com">Elliott Hauser</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://www.semanticscholar.org/author/Yao-Cheng-Chan/1818227389">Yao-Cheng
+                  Chan</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://www.semanticscholar.org/author/Sadanand-Modak/2274501520">Sadanand
+                  Modak</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.joydeepb.com">Joydeep Biswas</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="http://justinhart.net">Justin Hart</a><sup>2</sup>,
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>School of Information, UT Austin,</span><br>
+              <span class="author-block"><sup>2</sup>Department of Computer Science, UT Austin</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span class="is-size-7">Paper<br>(soon)</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span class="is-size-7">arXiv<br>(soon)</span>
+                  </a>
+                </span>
+                <!-- Video Link.
+                <span class="link-block">
+                  <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span> -->
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span class="is-size-7">Code<br>(soon)</span>
+                  </a>
+                </span>
+                <!-- Dataset Link. -->
+                <span class="link-block">
+                  <a href="https://doi.org/10.18738/T8/KAHJIB"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video<br>Data</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="far fa-images"></i>
+                    </span>
+                    <span>Real World<br>Data (soon)</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="far fa-images"></i>
+                    </span>
+                    <span>In-the-wild<br>Data (soon)</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video id="teaser" autoplay muted loop playsinline height="100%">
+          <source src="./static/videos/teaser.mp4" type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered">
+          <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+          free-viewpoint
+          portraits.
+        </h2>
+      </div>
+    </div>
+  </section> -->
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              HRI research using autonomous robots in real-world settings can produce results with the highest
+              ecological validity of any study modality, but many difficulties limit such studies' feasibility and
+              effectiveness. We propose <span class="dnerf">Vid2Real</span>, an HRI research framework to maximize
+              real-world insights offered by video-based studies.
+            </p>
+            <p>
+              The <span class="dnerf">Vid2Real</span> framework was used to design a video-based study that yielded a
+              more relevant understanding of the real-world site of interest. Our evaluation shows the framework
+              produced knowledge of the target site and effectively confirmed key assumptions. Further, the results are
+              able to directly inform future real-world study sample size estimation, and selection of robot behavioral
+              conditions. The <span class="dnerf">Vid2Real</span> framework offers HRI researchers a principled way to
+              take advantage of the efficiency of video-based study modalities while producing actionable knowledge for
+              future real-world studies. The proposed framework is particularly applicable to HRI topics such as
+              incidental human-robot encounters, which are inescapably context-dependent but are difficult and
+              labor-intensive to study in the wild.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+      <!-- Paper video. -->
+      <!-- <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Video</h2>
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0" frameborder="0"
+              allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div> -->
+      <!--/ Paper video. -->
+    </div>
+  </section>
+
+
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <h2 class="title is-3">Interventions</h2>
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div>
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/video_study/Baseline.mp4" type="video/mp4">
+            </video>
+            <h2 class="subtitle has-text-centered">
+              Baseline condition
+            </h2>
+          </div>
+          <div>
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/video_study/BL.mp4" type="video/mp4">
+            </video>
+            <h2 class="subtitle has-text-centered">
+              Body-Language-only condition
+            </h2>
+          </div>
+          <div>
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/video_study/Verbal.mp4" type="video/mp4">
+            </video>
+            <h2 class="subtitle has-text-centered">
+              Verbal-only condition
+            </h2>
+          </div>
+          <div>
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/video_study/BL+V.mp4" type="video/mp4">
+            </video>
+            <h2 class="subtitle has-text-centered">
+              Body-Language + Verbal condition
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section class="hero is-light is-small">
+    <div class="hero-body">
+      <h2 class="title is-3">Real-world study</h2>
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div>
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/video_study/Baseline.mp4" type="video/mp4">
+            </video>
+            <h2 class="subtitle has-text-centered">
+              Baseline condition
+            </h2>
+          </div>
+          <div>
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/video_study/BL.mp4" type="video/mp4">
+            </video>
+            <h2 class="subtitle has-text-centered">
+              Body-Language-only condition
+            </h2>
+          </div>
+          <div>
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/video_study/Verbal.mp4" type="video/mp4">
+            </video>
+            <h2 class="subtitle has-text-centered">
+              Verbal-only condition
+            </h2>
+          </div>
+          <div>
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/video_study/BL+V.mp4" type="video/mp4">
+            </video>
+            <h2 class="subtitle has-text-centered">
+              Body-Language + Verbal condition
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <!-- Video-Based Study. -->
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <h2 class="title is-3">Video-Based Study</h2>
+            <p>
+              Video recording methodology followed to ensure consistency between different conditions.
+            </p>
+            <div class="has-text-centered">
+              <img src="./static/images/overview.jpg" style="max-width:100%;height:auto;">
+              <!-- <p>Start Frame</p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Video-Based Study. -->
+
+      <!-- Concurrent Work. -->
+      <!-- <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Related Links</h2>
+
+          <div class="content has-text-justified">
+            <p>
+              There's a lot of excellent work that was introduced around the same time as ours.
+            </p>
+            <p>
+              <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an
+              idea similar to our windowed position encoding for coarse-to-fine optimization.
+            </p>
+            <p>
+              <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a
+                href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
+              both use deformation fields to model non-rigid scenes.
+            </p>
+            <p>
+              Some works model videos with a NeRF by directly modulating the density, such as <a
+                href="https://video-nerf.github.io/">Video-NeRF</a>, <a
+                href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a
+                href="https://neural-3d-video.github.io/">DyNeRF</a>
+            </p>
+            <p>
+              There are probably many more by the time you are reading this. Check out <a
+                href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a
+                href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
+            </p>
+          </div>
+        </div>
+      </div> -->
+      <!--/ Concurrent Work. -->
+    </div>
+  </section>
+
+  <!-- Latest News -->
+  <section class="section">
+    <div class="container">
+      <h1 class="title">Latest News</h1>
+      <div class="columns is-multiline">
+
+        <div class="column is-one-third">
+          <div class="card">
+            <div class="card-content">
+              <p class="title is-4">Workshop Paper</p>
+              <p class="subtitle is-6">March 11, 2024</p>
+              <p>Presented at the <i>Workshop YOUR Study Design!</i> workshop at HRI 2024.</p>
+            </div>
+            <footer class="card-footer">
+              <a href="https://sites.google.com/view/wysd2024/home?authuser=0" class="card-footer-item">Read More</a>
+            </footer>
+          </div>
+        </div>
+
+        <div class="column is-one-third">
+          <div class="card">
+            <div class="card-content">
+              <p class="title is-4">Video Dataset Published</p>
+              <p class="subtitle is-6">February 14, 2024</p>
+              <p>Online video-based questionnaire and video data released on the Texas Data Repository.</p>
+            </div>
+            <footer class="card-footer">
+              <a href="https://doi.org/10.18738/T8/KAHJIB" class="card-footer-item">Access Here</a>
+            </footer>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- Latest News -->
+
+
+  <!-- <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{park2021nerfies,
+        author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
+        title     = {Nerfies: Deformable Neural Radiance Fields},
+        journal   = {ICCV},
+        year      = {2021},}</code></pre>
+    </div>
+  </section> -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link" href="#">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a class="icon-link" href="#">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website uses source code from <a href="https://github.com/nerfies/nerfies.github.io"><span
+                  class="dnerf">Nerfies</span></a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
