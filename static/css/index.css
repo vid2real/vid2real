@@ -82,16 +82,6 @@ body {
   display: inline-block;
 }
 
-.video-container {
-  display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center items horizontally */
-  justify-content: center; /* Center items vertically if there's enough space */
-  text-align: center; /* Center the text for all child elements */
-  width: 100%; /* Take up full width */
-  height: 100%; /* Adjust height as needed, or use min-height for a minimum height */
-}
-
 .publication-banner img {
 }
 
