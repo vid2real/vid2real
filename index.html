@@ -199,22 +199,26 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              HRI research using autonomous robots in real-world settings can produce results with the highest
-              ecological validity of any study modality, but many difficulties limit such studies' feasibility and
-              effectiveness. We propose <span class="dnerf">Vid2RealHRI</span>, an HRI research framework to maximize
-              real-world insights offered by video-based studies.
+              HRI research using autonomous robots in real-world
+              settings can produce results with the highest ecological validity
+              of any study modality, but many difficulties limit such studies'
+              feasibility and effectiveness. We propose <span class="dnerf">Vid2RealHRI</span>, a
+              research framework to maximize real-world insights offered by
+              video-based studies.
             </p>
             <p>
-              The <span class="dnerf">Vid2RealHRI</span> framework was used to design a video-based study that yielded a
-              more relevant understanding of the real-world site of interest. Our evaluation shows the framework
-              produced knowledge of the target site and effectively confirmed key assumptions. Further, the results are
-              able to directly inform future real-world study sample size estimation, and selection of robot behavioral
-              conditions. The <span class="dnerf">Vid2RealHRI</span> framework offers HRI researchers a principled way
-              to
-              take advantage of the efficiency of video-based study modalities while producing actionable knowledge for
-              future real-world studies. The proposed framework is particularly applicable to HRI topics such as
-              incidental human-robot encounters, which are inescapably context-dependent but are difficult and
-              labor-intensive to study in the wild.
+              The <span class="dnerf">Vid2RealHRI</span> framework was used
+              to design an online study using first-person videos of robots
+              as real-world encounter surrogates. The online study <i>(n = 385)</i>
+              distinguished the within-subjects effects of four robot behavioral
+              conditions on perceived social intelligence and human willingness
+              to help the robot enter an exterior door. A real-world, between-
+              subjects replication <i>(n = 26)</i> using two conditions confirmed the
+              validity of the online study's findings and the sufficiency of the
+              participant recruitment target <i>(22)</i> based on a power analysis of
+              online study results. The <span class="dnerf">Vid2RealHRI</span> framework offers HRI
+              researchers a principled way to take advantage of the efficiency
+              of video-based study modalities while generating directly transferable knowledge of real-world HRI.
             </p>
           </div>
         </div>
@@ -246,7 +250,7 @@
               <source src="./static/videos/video_study/Baseline.mp4" type="video/mp4">
             </video>
             <h2 class="subtitle has-text-centered">
-              Baseline condition
+              <b>Baseline:</b> robot stops at the entrance and waits for the nearby human to push the button, without offering any indications that it needs assistance
             </h2>
           </div>
           <div class="column">
@@ -254,7 +258,7 @@
               <source src="./static/videos/video_study/BL.mp4" type="video/mp4">
             </video>
             <h2 class="subtitle has-text-centered">
-              Body-Language-only condition
+              <b>Body-Language-only:</b> robot stops at the entrance and turns its head facing the nearby human, then turns its head back to look at the door, then waits for the human to push the button
             </h2>
           </div>
           <div class="column">
@@ -262,7 +266,7 @@
               <source src="./static/videos/video_study/Verbal.mp4" type="video/mp4">
             </video>
             <h2 class="subtitle has-text-centered">
-              Verbal-only condition
+              <b>Verbal-only:</b> robot stops at the entrance and says, <em>"Excuse me, can you open the door for me?"</em> to the nearby human, then waits for the human to push the button
             </h2>
           </div>
           <div class="column">
@@ -270,7 +274,7 @@
               <source src="./static/videos/video_study/BL+V.mp4" type="video/mp4">
             </video>
             <h2 class="subtitle has-text-centered">
-              Body-Language + Verbal condition
+              <b>Body-Language + Verbal:</b> robot stops at the entrance and turns its head facing the nearby human and says, <em>"Excuse me, can you open the door for me?"</em>, then turns its head back to look at the door and waits for the human to push the button
             </h2>
           </div>
         </div>
@@ -330,10 +334,19 @@
           <div class="content">
             <h2 class="title is-3">Video-Based Study</h2>
             <p>
-              Video recording methodology followed to ensure consistency between different conditions.
+              Video recording methodology followed to ensure consistency between different conditions. <span
+                class="dnerf">Speech</span> uses the python libraries (gTTs and pydub) to
+              produce audio from text on the fly. <span class="dnerf">Bodypose</span> uses pointcloud-based object
+              detection to
+              detect the observer and leverages the Clearpath Spot-ROS
+              wrapper (built upon Boston Dynamics API) to modify the
+              pose of the robot in a way that its head is "looking" at the
+              observer. <span class="dnerf">Motreplay</span> uses a recorded ROS-bagfile and republishes the
+              stream of motion commands required to generate identical
+              navigation motion for the robot.
             </p>
             <div class="has-text-centered">
-              <img src="./static/images/overview.jpg" style="max-width:100%;height:auto;">
+              <img src="./static/images/studyprep.png" style="max-width:100%;height:auto;">
               <!-- <p>Start Frame</p> -->
             </div>
           </div>
